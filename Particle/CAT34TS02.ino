@@ -11,7 +11,7 @@
 #define Addr 0x18
 
 int temp = 0;
-float cTemp = 0.0, fTemp = 0.0;
+double cTemp = 0.0, fTemp = 0.0;
 void setup()
 {
   // Set variable
@@ -68,6 +68,7 @@ void loop()
 
   // Output data to dashboard
   Particle.publish("Temperature in Celsius : ", String(cTemp));
+  delay(1000);
   Particle.publish("Temperature in Fahrenheit : ", String(fTemp));
   delay(1000);
 }
